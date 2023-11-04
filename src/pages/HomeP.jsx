@@ -176,7 +176,7 @@ const HomeP = () => {
       <section id={styles.reviews}>
         <div className="container">
           <div className={styles.reviews}>
-            <iframe
+            <iframe title="reviews"
               src="https://widget-6534a686c62d4742851c145989909db2.elfsig.ht"
               frameborder="0"
             ></iframe>
@@ -187,7 +187,7 @@ const HomeP = () => {
       <section id={styles.location}>
         <div className="container">
           <div className={styles.location}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.256685129078!2d69.3195976!3d41.2584949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f505f378ed5%3A0xef1726578ee95c99!2sDavan%20hotel!5e0!3m2!1sru!2s!4v1699132876567!5m2!1sru!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.256685129078!2d69.3195976!3d41.2584949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f505f378ed5%3A0xef1726578ee95c99!2sDavan%20hotel!5e0!3m2!1sru!2s!4v1699132876567!5m2!1sru!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
