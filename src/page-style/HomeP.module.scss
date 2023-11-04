@@ -1,0 +1,140 @@
+#intro {
+    padding-top: 80px;
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.intro-section {
+    video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+#about-us {
+    padding-top: 40px;
+    @media (max-width: 800px) {
+        padding-top: 140px;
+    }
+}
+
+.about-us {
+    text-align: center;
+    h2 {
+        font-size: 48px;
+        margin-bottom: 12px;
+    }
+    & > p {
+        font-size: 20px;
+        margin-bottom: 32px;
+    }
+    & > video {
+        display: none;
+    }
+    @media (max-width: 800px) {
+        & > video {
+            display: block;
+            width: 100%;
+            margin-bottom: 24px;
+        }   
+    }
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 32px;
+        }
+        & > p {
+            font-size: 16px;
+        }
+    }
+}
+
+.mobile-text {
+    display: none;
+}
+@media (max-width: 800px) {
+ .mobile-text {
+    display: block;
+ }   
+ .desktop-text {
+    display: none;
+ }
+} 
+
+
+.location-info-box {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 180px;
+    border: 1px solid black;
+    @media (max-width: 763px) {
+        column-gap: 50px;
+    }
+    @media (max-width: 500px) {
+        padding: 20px;
+        flex-direction: column;
+        row-gap: 40px;
+        border: none;
+    }
+}
+
+#room-info {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.reviews {
+    iframe {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+#gallery {
+    padding-top: 80px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    &-image {
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 763px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 500px) {
+        &-image {
+            img {
+                height: 250px;
+            }
+        }
+        gap: 4px;
+    }
+}
+#location {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.location {
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+    @media (max-width: 500px) {
+        iframe {
+            height: 300px;
+        }
+    }
+}

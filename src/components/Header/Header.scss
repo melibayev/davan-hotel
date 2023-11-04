@@ -1,0 +1,102 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #232536;
+    z-index: 1000;
+}
+.navbar {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-logo {
+        h1 {
+            color: #ffffff;
+        }
+    }
+    &-items {
+        display: flex;
+        column-gap: 80px;
+    }
+    &-links {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+    }
+    &-link {
+        color: #ffffff;
+        transition: 0.5s;
+        &:hover {
+            color: #FFD050;
+        }
+    }
+    &-button {
+        padding: 16px 42px;
+        font-size: 18px;
+        font-weight: 700;
+        transition: .5s;
+        background-color: #ffffff;
+        &:hover {
+            background-color: #FFD050;
+        }
+    }
+    &-close-button{
+        position: absolute;
+        top: 24px;
+        right: 20px;
+    }
+    &-close-button,
+    &-hamburger {
+        background-color: transparent;
+        svg {
+            font-size: 32px;
+            fill: #ffffff;
+        }
+        display: none;
+    }
+    @media (max-width: 700px) {
+        &-links {
+            position: fixed;
+            top: -100%;
+            right: 0%;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #FFD050;
+            transition: .8s;
+        }
+        &-link {
+            padding: 24px 0;
+            text-align: center;
+            width: 100%;
+            color: #232536;
+            &:hover {
+                background-color: #232536;
+                color: #ffffff;
+            }
+        }
+        &-button {
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: #232536;
+            &:hover {
+                background-color: #232536;
+            }
+        }
+        &-open {
+            top: 0;
+        }
+        &-close-button,
+        &-hamburger {
+            display: block;
+        }
+        &-close-button {
+            svg {
+                fill: #232536;
+            }
+        }
+    }
+}
