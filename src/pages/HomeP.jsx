@@ -30,22 +30,22 @@ const HomeP = () => {
   const columns = useMemo(() => [
     {
       accessorKey: "name.room_type", //access nested data with dot notation
-      header: "Room Type",
+      header: "Xona Turi",
       size: 150,
     },
     {
       accessorKey: "name.number_of_people",
-      header: "Number of people",
+      header: "Xona Sig'imi",
       size: 150,
     },
     {
       accessorKey: "price", //normal accessorKey
-      header: "Price",
+      header: "Narxi",
       size: 200,
     },
     {
       accessorKey: "parameters",
-      header: "Parameters",
+      header: "Xususiyatlari",
       size: 150,
     },
   ]);
@@ -101,7 +101,7 @@ const HomeP = () => {
               сифатли ва арзон мехмонхона хизматини курсатиб келмокда.
             </p>
             <p className={styles['mobile-text']}>Тошкент шахрининг энг шинам ва арзон мехмонхоналаридан бирида сизни кутиб олишдан мамнунмиз.</p>
-            <video controls={false} loop autoPlay muted>
+            <video controls loop autoPlay muted>
               <source src={VIDEO} type="video/ogg" />
             </video>
             <div className={styles["location-info-box"]}>

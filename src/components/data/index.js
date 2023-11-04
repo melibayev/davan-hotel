@@ -1,7 +1,7 @@
 export const data = [
     {
       name: {
-        room_type: 'single room',
+        room_type: 'Bir kishilik',
         number_of_people: '1',
       },
       price: '261$',
@@ -10,7 +10,7 @@ export const data = [
     },
     {
       name: {
-        room_type: 'Double Room',
+        room_type: 'Ikki kishilik',
         number_of_people: '2',
       },
       price: '769$',
@@ -19,7 +19,7 @@ export const data = [
     },
     {
       name: {
-        room_type: 'Triple room',
+        room_type: 'Uch kishilik',
         number_of_people: '3',
       },
       price: '722$',
@@ -27,7 +27,7 @@ export const data = [
     },
     {
       name: {
-        room_type: 'Lux',
+        room_type: 'Lyuks',
         number_of_people: '2',
       },
       price: '566$',
