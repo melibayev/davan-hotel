@@ -88,12 +88,20 @@
 .room-info-title {
     font-size: 32px;
     margin-bottom: 24px;
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
 }
 
 .reviews {
     h2 {
         font-size: 32px;
         margin-bottom: 24px;
+    }
+    @media (max-width: 500px) {
+      h2 {
+        font-size: 24px;
+      }
     }
   iframe {
     width: 100%;

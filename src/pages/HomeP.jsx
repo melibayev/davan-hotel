@@ -120,7 +120,7 @@ const HomeP = () => {
               сизни кутиб олишдан мамнунмиз.
             </p>
             {/* <video playsinline controls loop autoPlay muted> */}
-            <iframe src="https://www.youtube.com/embed/vBF_WNPb-A0?autoplay=1&mute=1&modestbranding=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay allowfullscreen></iframe>
             {/* </video> */}
             <div className={styles["location-info-box"]}>
               <div className={styles["location-info"]}>
