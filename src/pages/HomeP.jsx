@@ -23,7 +23,7 @@ import styles from "../page-style/HomeP.module.scss";
 import { data } from "../components/data/index";
 
 import VIDEO from "../assets/video/video.MOV";
-import VIDEO_LOW_QUALITY from '../assets/video/low.mp4'
+import VIDEO_LOW_QUALITY from "../assets/video/low.mp4";
 
 import IMG1 from "../assets/images/img1.jpg";
 import IMG3 from "../assets/images/img3.jpg";
@@ -37,6 +37,7 @@ import IMG13 from "../assets/images/img13.jpg";
 import IMG14 from "../assets/images/img14.jpg";
 import IMG16 from "../assets/images/img16.jpg";
 import IMG19 from "../assets/images/img19.jpg";
+import { NavLink } from "react-router-dom";
 
 const HomeP = () => {
   // Room info start
@@ -94,8 +95,6 @@ const HomeP = () => {
   });
   // Room info end
 
-
-
   return (
     <Fragment>
       <section id={styles.intro}>
@@ -111,16 +110,20 @@ const HomeP = () => {
           <div className={styles["about-us"]}>
             <h2>Davan Hotel</h2>
             <p className={styles["desktop-text"]}>
-              Мехмонхонамиз 2021-йил ноябрь ойида куриб битказилган булиб,
-              деярли икки йил давомида Республикамиз ва чет эл фукаролари учун
-              сифатли ва арзон мехмонхона хизматини курсатиб келмокда.
+              Mehmonxonamiz 2021-yil noyabr oyida qurib bitkazilgan bo'lib, deyarli ikki yil davomida Respublikamiz va chet el fuqarolari uchun <span>sifatli</span> va <span>arzon</span> mehmonxona xizmatini ko'rsatib kelmoqda
             </p>
             <p className={styles["mobile-text"]}>
-              Тошкент шахрининг энг шинам ва арзон мехмонхоналаридан бирида
-              сизни кутиб олишдан мамнунмиз.
+            Toshkent shahrining eng <span>shinam</span> va <span>arzon</span> mehmonxonalaridan birida sizni kutib olishdan mamnunmiz.
             </p>
             {/* <video playsinline controls loop autoPlay muted> */}
-            <iframe src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay allowfullscreen></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              autoPlay
+              allowfullscreen
+            ></iframe>
             {/* </video> */}
             <div className={styles["location-info-box"]}>
               <div className={styles["location-info"]}>
@@ -133,7 +136,7 @@ const HomeP = () => {
               </div>
               <div className={styles["location-info"]}>
                 <h4>7.8 km</h4>
-                <p>T/Y vokzalgacha</p>
+                <p>T/Y Vokzalgacha</p>
               </div>
             </div>
           </div>
@@ -183,7 +186,7 @@ const HomeP = () => {
 
       <section id={styles.services}>
         <div className="container">
-          <h2 className={styles['services-title']}>Xizmatlar</h2>
+          <h2 className={styles["services-title"]}>Xizmatlar</h2>
           <div className={styles.services}>
             <p>
               <FaWifi /> Wi-fi
@@ -227,7 +230,7 @@ const HomeP = () => {
 
       <section id={styles["room-info"]}>
         <div className="container">
-          <h2 className={styles['room-info-title']}>Xona Ma'lumotlari</h2>
+          <h2 className={styles["room-info-title"]}>Xona Ma'lumotlari</h2>
           <div className="table">
             <MaterialReactTable table={table} />
           </div>
@@ -250,13 +253,18 @@ const HomeP = () => {
       <section id={styles.location}>
         <div className="container">
           <div className={styles.location}>
-            <iframe
-              title="location"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.256685129078!2d69.3195976!3d41.2584949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f505f378ed5%3A0xef1726578ee95c99!2sDavan%20hotel!5e0!3m2!1sru!2s!4v1699132876567!5m2!1sru!2s"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            
+              <iframe
+                title="location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.256685129078!2d69.3195976!3d41.2584949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f505f378ed5%3A0xef1726578ee95c99!2sDavan%20hotel!5e0!3m2!1sru!2s!4v1699132876567!5m2!1sru!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            <NavLink to={
+                "https://www.google.com/maps/dir//Davan+hotel/@41.2584655,69.2371968,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x38ae5f505f378ed5:0xef1726578ee95c99!2m2!1d69.3196049!2d41.2584972?entry=ttu"
+              }><button className={styles['location-button']}>Yo'lni belgilash</button>
+            </NavLink>
           </div>
         </div>
       </section>

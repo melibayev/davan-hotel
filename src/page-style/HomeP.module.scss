@@ -29,6 +29,11 @@
   & > p {
     font-size: 20px;
     margin-bottom: 32px;
+    span {
+      text-decoration: underline;
+      font-weight: 700;
+      color: rgb(25, 123, 255);
+    }
   }
   & > iframe {
     display: none;
@@ -46,7 +51,7 @@
       font-size: 32px;
     }
     & > p {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }
@@ -68,7 +73,8 @@
   display: flex;
   justify-content: center;
   column-gap: 180px;
-  border: 1px solid black;
+  border: 1px solid #232536;
+  border-radius: 8px;
   @media (max-width: 763px) {
     column-gap: 50px;
   }
@@ -80,29 +86,40 @@
   }
 }
 
+.location-info {
+  h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(25, 123, 255);
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
 #room-info {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
 .room-info-title {
-    font-size: 32px;
-    margin-bottom: 24px;
-    @media (max-width: 500px) {
-      font-size: 24px;
-    }
+  font-size: 32px;
+  margin-bottom: 24px;
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
 }
 
 .reviews {
+  h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 500px) {
     h2 {
-        font-size: 32px;
-        margin-bottom: 24px;
+      font-size: 24px;
     }
-    @media (max-width: 500px) {
-      h2 {
-        font-size: 24px;
-      }
-    }
+  }
   iframe {
     width: 100%;
     height: 100vh;
@@ -111,6 +128,9 @@
 
 #gallery {
   padding-top: 80px;
+  @media (max-width: 763px) {
+    padding-top: 40px;
+  }
 }
 
 .gallery {
@@ -148,6 +168,16 @@
   iframe {
     width: 100%;
     height: 500px;
+  }
+  text-align: center;
+  &-button {
+    padding: 12px 32px;
+    font-size: 16px;
+    margin-top: 32px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: rgb(25, 123, 255);
   }
   @media (max-width: 500px) {
     iframe {
@@ -187,9 +217,9 @@
     grid-template-columns: 1fr;
     text-align: left;
     p {
-        justify-content: flex-start;
-        flex-direction: row;
-        row-gap: 12px;
+      justify-content: flex-start;
+      flex-direction: row;
+      row-gap: 12px;
     }
-    }
+  }
 }
