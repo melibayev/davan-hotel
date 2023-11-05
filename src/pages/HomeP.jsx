@@ -195,13 +195,10 @@ const HomeP = () => {
               <BiRestaurant /> Restoran
             </p>
             <p>
-              <CiDeliveryTruck /> Mahsulotlar yetqazish (qo'shimcha to'lov)
-            </p>
-            <p>
               <AiTwotoneShop /> Hududda do'konlar
             </p>
             <p>
-              <MdOutlineIron /> Dazmollash xizmati (qo'shimcha to'lov)
+              <PiTelevisionSimpleFill /> Tekis ekranli televizor
             </p>
             <p>
               <MdFamilyRestroom /> Oilaviy xonalar
@@ -210,19 +207,22 @@ const HomeP = () => {
               <GiLinkedRings /> Yosh oilalar uchun lyuks xonalar
             </p>
             <p>
-              <FaParking /> Qo'riqlanadigan avtoturargoh
-            </p>
-            <p>
               <MdRoomService /> 24 soat davomida ro'yxatga olish joyi
             </p>
             <p>
-              <MdOutlineLocalLaundryService /> Kir yuvish (qo'shimcha to'lov)
+              <MdOutlineLocalLaundryService /> Kir yuvish 
             </p>
             <p>
-              <PiTelevisionSimpleFill /> Tekis ekranli televizor
+              <MdOutlineIron /> Dazmollash xizmati 
             </p>
             <p>
               <MdCleaningServices /> Kundalik xona tozalash
+            </p>
+            <p>
+              <FaParking /> Qo'riqlanadigan avtoturargoh
+            </p>
+            <p>
+              <CiDeliveryTruck /> Mahsulotlar yetqazish 
             </p>
           </div>
         </div>
