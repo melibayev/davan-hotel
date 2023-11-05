@@ -119,9 +119,9 @@ const HomeP = () => {
               Тошкент шахрининг энг шинам ва арзон мехмонхоналаридан бирида
               сизни кутиб олишдан мамнунмиз.
             </p>
-            <video playsinline controls loop autoPlay muted>
-              <source src={VIDEO_LOW_QUALITY} type="video/ogg" />
-            </video>
+            {/* <video playsinline controls loop autoPlay muted> */}
+            <iframe src="https://www.youtube.com/embed/vBF_WNPb-A0?autoplay=1&mute=1&modestbranding=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay allowfullscreen></iframe>
+            {/* </video> */}
             <div className={styles["location-info-box"]}>
               <div className={styles["location-info"]}>
                 <h4>6.7 km</h4>
