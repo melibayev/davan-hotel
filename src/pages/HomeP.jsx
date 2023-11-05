@@ -23,6 +23,7 @@ import styles from "../page-style/HomeP.module.scss";
 import { data } from "../components/data/index";
 
 import VIDEO from "../assets/video/video.MOV";
+import VIDEO_LOW_QUALITY from '../assets/video/low.mp4'
 
 import IMG1 from "../assets/images/img1.jpg";
 import IMG3 from "../assets/images/img3.jpg";
@@ -93,18 +94,13 @@ const HomeP = () => {
   });
   // Room info end
 
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
-  // This function will be called when the video has loaded
-  const handleVideoLoaded = () => {
-    setVideoLoaded(true);
-  };
 
   return (
     <Fragment>
       <section id={styles.intro}>
         <div className={styles["intro-section"]}>
-          <video onLoadedData={() => handleVideoLoaded} controls={false} loop autoPlay muted>
+          <video controls={false} loop autoPlay muted>
             <source src={VIDEO} type="video/ogg" />
           </video>
         </div>
@@ -123,8 +119,8 @@ const HomeP = () => {
               Тошкент шахрининг энг шинам ва арзон мехмонхоналаридан бирида
               сизни кутиб олишдан мамнунмиз.
             </p>
-            <video controls loop>
-              <source src={VIDEO} type="video/ogg" />
+            <video controls loop autoPlay muted>
+              <source src={VIDEO_LOW_QUALITY} type="video/ogg" />
             </video>
             <div className={styles["location-info-box"]}>
               <div className={styles["location-info"]}>
