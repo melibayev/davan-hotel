@@ -4,8 +4,8 @@ export const data = [
         room_type: 'Bir kishilik',
         number_of_people: '1',
       },
-      price: '261$',
-      parameters: 'East Daphne',
+      price: '350 000 UZS',
+      parameters: 'Kredit kartasiz bron qilish mumkin. Ajoyib nonushta narxga kiritilgan.',
       
     },
     {
@@ -13,8 +13,8 @@ export const data = [
         room_type: 'Ikki kishilik',
         number_of_people: '2',
       },
-      price: '769$',
-      parameters: 'Columbus',
+      price: '500 000 UZS',
+      parameters: 'Kredit kartasiz bron qilish mumkin. Ajoyib nonushta narxga kiritilgan.',
       
     },
     {
@@ -22,16 +22,16 @@ export const data = [
         room_type: 'Uch kishilik',
         number_of_people: '3',
       },
-      price: '722$',
-      parameters: 'Lincoln',
+      price: '600 000 UZS',
+      parameters: 'Kredit kartasiz bron qilish mumkin. Ajoyib nonushta narxga kiritilgan.',
     },
     {
       name: {
         room_type: 'Lyuks',
         number_of_people: '2',
       },
-      price: '566$',
-      parameters: 'South Linda',
+      price: '700 000 UZS',
+      parameters: "Kredit kartasiz bron qilish mumkin. Ajoyib nonushta narxga kiritilgan.",
       
     },
   ];

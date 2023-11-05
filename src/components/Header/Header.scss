@@ -23,13 +23,16 @@ nav {
     &-links {
         display: flex;
         align-items: center;
-        column-gap: 24px;
+        column-gap: 28px;
     }
     &-link {
         color: #ffffff;
         transition: 0.5s;
+        svg {
+            font-size: 24px;
+        }
         &:hover {
-            color: #FFD050;
+            color: #A7D397;
         }
     }
     &-button {
@@ -59,13 +62,13 @@ nav {
     @media (max-width: 700px) {
         &-links {
             position: fixed;
-            top: -100%;
-            right: 0%;
-            width: 100%;
+            top: 0%;
+            right: -100%;
+            width: 60%;
             height: 100%;
             justify-content: center;
             flex-direction: column;
-            background-color: #FFD050;
+            background-color: #D0D4CA;
             transition: .8s;
         }
         &-link {
@@ -73,10 +76,13 @@ nav {
             text-align: center;
             width: 100%;
             color: #232536;
-            &:hover {
-                background-color: #232536;
-                color: #ffffff;
+            svg {
+                font-size: 32px;
             }
+            // &:hover {
+            //     background-color: #232536;
+            //     color: #ffffff;
+            // }
         }
         &-button {
             margin-top: 20px;
@@ -87,7 +93,7 @@ nav {
             }
         }
         &-open {
-            top: 0;
+            right: 0;
         }
         &-close-button,
         &-hamburger {

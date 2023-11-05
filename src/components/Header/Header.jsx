@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import  { AiOutlineClose }  from 'react-icons/ai'
+import { FaTelegram,FaInstagramSquare } from 'react-icons/fa'
 
 import './Header.scss'
 const Header = () => {
@@ -16,10 +17,9 @@ const Header = () => {
             </div>
             <div className="navbar-items">
               <ul className={`navbar-links ${navbar ? 'navbar-open' : ''}`}>
-                <NavLink to={'/'}><li className='navbar-link'>Home</li></NavLink>
-                <NavLink to={'/'}><li className='navbar-link'>Blogs</li></NavLink>
-                <NavLink to={'/'}><li className='navbar-link'>About Us</li></NavLink>
-                <NavLink to={'/'}><li className='navbar-link'>Register</li></NavLink>
+                <NavLink to={'/'}><li className='navbar-link'><FaTelegram /></li></NavLink>
+                <NavLink to={'/'}><li className='navbar-link'><FaInstagramSquare /></li></NavLink>
+                <NavLink to={'/'}><li className='navbar-link'>+998 95 142 65 65</li></NavLink>
                 <button className='navbar-close-button' onClick={() => setNavbar(false)}><AiOutlineClose /></button>
               </ul>
               <button className='navbar-hamburger' onClick={() => setNavbar(true)}><GiHamburgerMenu /></button>
