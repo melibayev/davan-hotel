@@ -17,8 +17,8 @@ const Header = () => {
             </div>
             <div className="navbar-items">
               <ul className={`navbar-links ${navbar ? 'navbar-open' : ''}`}>
-                <NavLink to={'/https://t.me/davan_hotel_rasmlar'}><li className='navbar-link'><FaTelegram /></li></NavLink>
-                <NavLink to={'/https://www.instagram.com/davan_hotel_uz/?ref=27032015&hl=da'}><li className='navbar-link'><FaInstagramSquare /></li></NavLink>
+                <NavLink to={'https://t.me/davan_hotel_rasmlar'}><li className='navbar-link'><FaTelegram /></li></NavLink>
+                <NavLink to={'https://www.instagram.com/davan_hotel_uz/?ref=27032015&hl=da'}><li className='navbar-link'><FaInstagramSquare /></li></NavLink>
                 <NavLink to={'/'}><li className='navbar-link'>+998 95 142 65 65</li></NavLink>
                 <button className='navbar-close-button' onClick={() => setNavbar(false)}><AiOutlineClose /></button>
               </ul>

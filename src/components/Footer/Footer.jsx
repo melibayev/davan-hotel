@@ -19,13 +19,13 @@ const Footer = () => {
             <h4>Ijtimoiy Tarmoqlar</h4>
             <div className="footer-social-medias-links">
               <p>
-                <NavLink to={'/https://t.me/davan_hotel_rasmlar'}><FaTelegram /></NavLink>
+                <NavLink to={'https://t.me/davan_hotel_rasmlar'}><FaTelegram /></NavLink>
               </p>
               <p>
-                <NavLink to={'/https://www.instagram.com/davan_hotel_uz/?ref=27032015&hl=da'}><FaInstagramSquare /></NavLink>
+                <NavLink to={'https://www.instagram.com/davan_hotel_uz/?ref=27032015&hl=da'}><FaInstagramSquare /></NavLink>
               </p>
               <p>
-                <NavLink to={'/https://www.youtube.com/@davanhotel3348'}><FaYoutube /></NavLink>
+                <NavLink to={'https://www.youtube.com/@davanhotel3348'}><FaYoutube /></NavLink>
               </p>
             </div>
           </div>
