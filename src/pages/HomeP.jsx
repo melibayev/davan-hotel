@@ -119,7 +119,7 @@ const HomeP = () => {
               Тошкент шахрининг энг шинам ва арзон мехмонхоналаридан бирида
               сизни кутиб олишдан мамнунмиз.
             </p>
-            <video controls loop autoPlay muted>
+            <video playsinline controls loop autoPlay muted>
               <source src={VIDEO_LOW_QUALITY} type="video/ogg" />
             </video>
             <div className={styles["location-info-box"]}>
