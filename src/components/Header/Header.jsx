@@ -30,6 +30,7 @@ const Header = () => {
     setCurrency(currency)
   }
 
+
   
 
   return (
@@ -71,7 +72,6 @@ const Header = () => {
                 <NavLink to={"/"}>
                   <li className="navbar-link">
                   <select id="languageSelect" value={selectedCountry} onChange={handleCountryChange}>
-                    <option value="" disabled>Tilni tanlang</option>
                     <option value="ru">Русский</option>
                     <option value="en">English</option>
                     <option value="uz">O'zbekcha</option>
