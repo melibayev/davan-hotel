@@ -75,10 +75,12 @@
   column-gap: 180px;
   border: 1px solid #232536;
   border-radius: 8px;
-  @media (max-width: 763px) {
+  text-align: center;
+
+  @media (max-width: 963px) {
     column-gap: 50px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     padding: 20px;
     flex-direction: column;
     row-gap: 40px;
@@ -90,6 +92,7 @@
   h4 {
     font-size: 24px;
     font-weight: 700;
+    margin: 0;
     color: rgb(25, 123, 255);
   }
   p {
@@ -97,9 +100,21 @@
   }
 }
 
-#room-info {
+#room-info-mobile {
+  display: none;
+}
+
+#room-info, #room-info-mobile {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+  #room-info {
+    display: none;
+  }
+  #room-info-mobile {
+    display: block;
+  }
 }
 
 .room-info-title {
@@ -108,6 +123,29 @@
   @media (max-width: 500px) {
     font-size: 24px;
   }
+}
+
+.room-img {
+  p {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: rgb(25, 123, 255);
+  }
+  img {
+    width: 100%;
+    height: 250px;
+    object-position: 100% 70%;
+    object-fit: cover;
+  }
+}
+
+.room-description {
+  padding: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  p {
+    margin-bottom: 8px;
+  }
+  margin-bottom: 48px;
 }
 
 .reviews {
@@ -206,8 +244,9 @@
     align-items: center;
     column-gap: 8px;
     row-gap: 8px;
-    text-align: center;
     font-size: 14px;
+    margin: 0;
+    text-align: center;
     svg {
       font-size: 24px;
       color: rgb(25, 123, 255);

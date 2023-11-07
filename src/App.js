@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from './components/layout/index';
 import HomeP from "./pages/HomeP";
 
+
 function App() {
   return (
     <BrowserRouter>

@@ -1,3 +1,5 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+
 nav {
   position: fixed;
   top: 0;
@@ -13,6 +15,8 @@ nav {
   justify-content: space-between;
   &-logo {
     h1 {
+      font-size: 24px;
+      margin: 0;
       color: #ffffff;
     }
   }
@@ -24,6 +28,8 @@ nav {
     display: flex;
     align-items: center;
     column-gap: 28px;
+    margin: 0;
+    margin-right: 60px;
   }
   &-link {
     color: #ffffff;
@@ -49,30 +55,37 @@ nav {
     }
     display: none;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     &-links {
       position: fixed;
       top: 0%;
       right: -100%;
-      width: 60%;
+      width: 70%;
       height: 100%;
-      justify-content: center;
       flex-direction: column;
-      background-color: #d0d4ca;
+      padding-top: 70px;
+      margin-right: 0;
+      background-color: #ffffff;
       transition: 0.8s;
+      a {
+        width: 100%;
+      }
     }
     &-link {
       padding: 24px 0;
-      text-align: center;
       width: 100%;
+      height: 100%;
       color: #232536;
+      border-bottom: 1px solid #ccc;
+
       svg {
         font-size: 32px;
       }
-      // &:hover {
-      //     background-color: #232536;
-      //     color: #ffffff;
-      // }
+    }
+    &-link.instagram,
+    &-link.telegram,
+    &-link.number {
+      display: none;
     }
     &-button {
       margin-top: 20px;
@@ -96,3 +109,42 @@ nav {
     }
   }
 }
+
+select {
+  padding: 2px 8px;
+  appearance: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.flag-icon {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 35px; /* Adjust the size as needed */
+  height: 25px;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 800px) {
+    top: 28.3%;
+    left: 60%;
+  }
+}
+.flag-icon.ru {
+  background-image: url('https://flagcdn.com/ru.svg');
+}
+.flag-icon.en {
+  background-image: url('https://flagcdn.com/gb.svg');
+}
+.flag-icon.uz {
+  background-image: url('https://flagcdn.com/uz.svg');
+}
+
+
