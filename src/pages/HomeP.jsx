@@ -20,6 +20,10 @@ import {
   MdOutlineLocalLaundryService,
 } from "react-icons/md";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
 import styles from "../page-style/HomeP.module.scss";
 import { translateData } from "../components/data/index";
 import { useCurrency } from "../components/currency/currencyContext";
@@ -45,6 +49,28 @@ import IMG19 from "../assets/images/img19.jpg";
 const HomeP = () => {
   const { t } = useTranslation();
   const { selectedCurrency } = useCurrency();
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+  
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  
+  });
 
   const [prices, setPrices] = useState({
     usd: { single_room: '30 $', double_room: '40 $', triple_room: '48 $', lux_room: '58 $'},
@@ -174,7 +200,7 @@ const HomeP = () => {
       </section>
 
       <section id={styles.gallery}>
-        <div className={styles.gallery}>
+        <div className={styles.gallery} data-aos="fade-up">
           <div className={styles["gallery-image"]}>
             <img src={IMG19} alt="" />
           </div>
@@ -218,40 +244,40 @@ const HomeP = () => {
         <div className="container">
           <h2 className={styles["services-title"]}>{t('services')}</h2>
           <div className={styles.services}>
-            <p>
+            <p data-aos="fade-up">
               <FaWifi /> {t('wi-fi')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <BiRestaurant /> {t('restaurant')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <AiTwotoneShop /> {t('shops')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <PiTelevisionSimpleFill /> {t('tv')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <MdFamilyRestroom /> {t('family_rooms')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <GiLinkedRings /> {t('lux_rooms_for_young_family')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <MdRoomService /> {t('registration')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <MdOutlineLocalLaundryService /> {t('laundry')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <MdOutlineIron /> {t('ironing')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <MdCleaningServices /> {t('cleaning')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <FaParking /> {t('parking')}
             </p>
-            <p>
+            <p data-aos="fade-up">
               <CiDeliveryTruck /> {t('delivery')}
             </p>
           </div>
@@ -259,7 +285,7 @@ const HomeP = () => {
       </section>
 
       <section id={styles["room-info"]}>
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h2 className={styles["room-info-title"]}>{t('info_about_room')}</h2>
           <div className="table">
             <MaterialReactTable table={table} />
@@ -270,6 +296,7 @@ const HomeP = () => {
       <section id={styles['room-info-mobile']}>
         <div className="container">
           <h2 className={styles["room-info-title"]}>{t('info_about_room')}</h2>
+            <div data-aos="fade-up">
             <div className={styles['room-img']}>
               <p>{t('single_room')}</p>
               <img src={IMG7} alt="" />
@@ -280,30 +307,36 @@ const HomeP = () => {
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
+            </div>
 
-            <div className={styles['room-img']}>
+            <div data-aos="fade-up">
+            <div className={styles['room-img']} >
               <p>{t('double_room')}</p>
               <img src={IMG17} alt="" />
             </div>
-            <div className={styles["room-description"]}>
+            <div className={styles["room-description"]} >
               <p>{t('max_persons')}: 2</p>
               <p>{t('price')}: {prices[selectedCurrency]['double_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
+            </div>
 
+            <div data-aos="fade-up">
             <div className={styles['room-img']}>
               <p>{t('triple_room')}</p>
               <img src={IMG11} alt="" />
             </div>
-            <div className={styles["room-description"]}>
+            <div className={styles["room-description"]} >
               <p>{t('max_persons')}: 3</p>
               <p>{t('price')}: {prices[selectedCurrency]['triple_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
+            </div>
 
 
+            <div data-aos="fade-up">
             <div className={styles['room-img']}>
               <p>{t('lux_room')}</p>
               <img src={IMG3} alt="" />
@@ -314,13 +347,14 @@ const HomeP = () => {
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
+            </div>
             
         </div>
       </section>
 
       <section id={styles.reviews}>
         <div className="container">
-          <div className={styles.reviews}>
+          <div className={styles.reviews} >
             <h2>{t('clients')}</h2>
             <iframe
               title="reviews"
@@ -333,7 +367,7 @@ const HomeP = () => {
 
       <section id={styles.location}>
         <div className="container">
-          <div className={styles.location}>
+          <div className={styles.location} data-aos="fade-up">
             <iframe
               title="location"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.256685129078!2d69.3195976!3d41.2584949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f505f378ed5%3A0xef1726578ee95c99!2sDavan%20hotel!5e0!3m2!1sru!2s!4v1699132876567!5m2!1sru!2s"
