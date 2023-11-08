@@ -11,7 +11,7 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { AiTwotoneShop } from "react-icons/ai";
 import { GiLinkedRings } from "react-icons/gi";
 import { FaParking } from "react-icons/fa";
-import { PiTelevisionSimpleFill } from "react-icons/pi";
+import { PiTelevisionSimpleFill, PiPhoneCallFill } from "react-icons/pi";
 import {
   MdOutlineIron,
   MdFamilyRestroom,
@@ -109,9 +109,24 @@ const HomeP = () => {
   });
   // Room info end
 
+  const [scrolled, setScrolled] = useState(false);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  });
+
 
   return (
     <Fragment>
+      <div className={styles[`phone-call`]}>
+        <NavLink to={'tel:+998951426565'}>
+          <PiPhoneCallFill />
+        </NavLink>
+      </div>
       <section id={styles.intro}>
         <div className={styles["intro-section"]}>
           <video controls={false} loop autoPlay muted>

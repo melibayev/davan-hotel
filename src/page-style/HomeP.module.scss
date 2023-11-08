@@ -1,3 +1,30 @@
+.phone-call {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #dd7973;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding-top: 3px;
+    border-radius: 50%;
+    transition: 0.5s;
+    text-align: center;
+    svg {
+      margin-left: -1px;
+      color: #FFFFFF;
+    }
+}
+
+.scroll-up {
+  bottom: 50px;
+}
+
 #intro {
   padding-top: 80px;
   @media (max-width: 800px) {
@@ -79,12 +106,12 @@
 
   @media (max-width: 963px) {
     column-gap: 50px;
+    border: none;
   }
   @media (max-width: 800px) {
     padding: 20px;
     flex-direction: column;
     row-gap: 40px;
-    border: none;
   }
 }
 
@@ -262,3 +289,5 @@
     }
   }
 }
+
+

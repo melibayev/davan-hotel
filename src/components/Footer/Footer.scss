@@ -45,9 +45,10 @@ footer {
       svg {
         font-size: 24px;
         color: #ffffff;
-        :hover {
-          color: rgb(25, 123, 255);
-        }
+      transition: 0.5s;
+      &:hover {
+        color: #dd7973;
+      }
       }
     }
 

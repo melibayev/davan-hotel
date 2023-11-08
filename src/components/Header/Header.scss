@@ -13,6 +13,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   &-logo {
     h1 {
       font-size: 24px;
@@ -29,7 +30,7 @@ nav {
     align-items: center;
     column-gap: 28px;
     margin: 0;
-    margin-right: 60px;
+    margin-right: 40px;
   }
   &-link {
     color: #ffffff;
@@ -38,7 +39,7 @@ nav {
       font-size: 24px;
     }
     &:hover {
-      color: rgb(25, 123, 255);
+      color: #dd7973;
     }
   }
   &-link.social-medias,
@@ -143,7 +144,7 @@ select {
   background-size: cover;
   background-position: center;
   @media (max-width: 800px) {
-    position:static;
+    position: static;
     // top: calc(20% + 56px);
     // left: calc(40% + 50px);
     margin-top: -15px;

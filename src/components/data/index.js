@@ -1,6 +1,5 @@
 import { Translation } from "react-i18next"
 export function translateData(t, selectedCurrency, prices)  {
-  console.log(prices);
   return [
     {
       name: {
