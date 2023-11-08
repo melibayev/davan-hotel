@@ -1,12 +1,13 @@
 import { Translation } from "react-i18next"
-export function translateData(t)  {
+export function translateData(t, selectedCurrency, prices)  {
+  console.log(prices);
   return [
     {
       name: {
         room_type: t('single_room'),
         number_of_people: '1',
       },
-      price: '30 $',
+      price: prices[selectedCurrency]['single_room'],
       parameters: t('options_desc'),
       
     },
@@ -15,7 +16,7 @@ export function translateData(t)  {
         room_type: t('double_room'),
         number_of_people: '2',
       },
-      price: '40 $',
+      price: prices[selectedCurrency]['double_room'],
       parameters: t('options_desc'),
       
     },
@@ -24,7 +25,7 @@ export function translateData(t)  {
         room_type: t('triple_room'),
         number_of_people: '3',
       },
-      price: '48 $',
+      price: prices[selectedCurrency]['triple_room'],
       parameters: t('options_desc'),
     },
     {
@@ -32,7 +33,7 @@ export function translateData(t)  {
         room_type: t('lux_room'),
         number_of_people: '2',
       },
-      price: '57 $',
+      price: prices[selectedCurrency]['lux_room'],
       parameters: t('options_desc'),
       
     },

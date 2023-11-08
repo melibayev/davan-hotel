@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaTelegram, FaInstagramSquare } from "react-icons/fa";
+import { FaTelegram, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { BsTelephoneFill } from 'react-icons/bs'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
@@ -11,11 +11,12 @@ import "./Header.scss";
 import i18n from "../language/i18n";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
+import { useCurrency } from '../currency/currencyContext'
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState("ru");
-  const [currency, setCurrency] = useState('usd')
+  const { selectedCurrency, setSelectedCurrency } = useCurrency();
   const { i18n } = useTranslation();
 
   const handleCountryChange = (e) => {
@@ -25,9 +26,8 @@ const Header = () => {
     setNavbar(false)
   };
 
-  const changeCurrency = (e) => {
-    const currency = e.target.value;
-    setCurrency(currency)
+  const handleCurrencyChange = (e) => {
+    setSelectedCurrency(e.target.value);
     setNavbar(false)
   }
 
@@ -63,7 +63,7 @@ const Header = () => {
                 </NavLink>
                 <NavLink to={"/"}>
                   <li className="navbar-link">
-                    <select value={currency} onChange={changeCurrency}>
+                    <select value={selectedCurrency} onChange={handleCurrencyChange}>
                       <option value="usd">USD $</option>
                       <option value="rub">RUB ₽</option>
                       <option value="uzs">UZS</option>
@@ -73,6 +73,7 @@ const Header = () => {
                 <NavLink to={"/"}>
                   <li className="navbar-link">
                   <select id="languageSelect" value={selectedCountry} onChange={handleCountryChange}>
+                    <option value="" disabled>{t('language')}</option>
                     <option value="ru">Русский</option>
                     <option value="en">English</option>
                     <option value="uz">O'zbekcha</option>
@@ -80,6 +81,22 @@ const Header = () => {
                   <div className={`flag-icon ${selectedCountry}`} />
                   </li>
                 </NavLink>
+                  <NavLink to={'tel:+998951426565'}>
+                    <li className="navbar-link phone-number">
+                      +998951426565
+                    </li>
+                  </NavLink>
+                  <li className="navbar-link social-medias">
+                    <NavLink to={"https://www.instagram.com/davan_hotel_uz/?ref=27032015&hl=da"}>
+                      <FaInstagramSquare />
+                    </NavLink>
+                    <NavLink to={'https://t.me/davan_hotel_rasmlar'}>
+                    <FaTelegram />
+                    </NavLink>
+                    <NavLink to={'https://www.youtube.com/@davanhotel3348'}>
+                    <FaYoutube />
+                    </NavLink>
+                  </li>
                 <button
                   className="navbar-close-button"
                   onClick={() => setNavbar(false)}

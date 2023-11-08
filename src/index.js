@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
+import { CurrencyProvider } from './components/currency/currencyContext';
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -14,9 +15,11 @@ i18next.init({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CurrencyProvider >
      <I18nextProvider i18n={i18next}>
     <App />
      </I18nextProvider>
+     </CurrencyProvider>
   </React.StrictMode>
 );
 

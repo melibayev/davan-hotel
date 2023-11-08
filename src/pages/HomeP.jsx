@@ -1,4 +1,5 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState} from "react";
+import { NavLink } from "react-router-dom";
 import { useMemo } from "react";
 import {
   MaterialReactTable,
@@ -21,6 +22,7 @@ import {
 
 import styles from "../page-style/HomeP.module.scss";
 import { translateData } from "../components/data/index";
+import { useCurrency } from "../components/currency/currencyContext";
 import { useTranslation } from 'react-i18next';
 
 import VIDEO from "../assets/video/video.MOV";
@@ -38,17 +40,20 @@ import IMG14 from "../assets/images/img14.jpg";
 import IMG16 from "../assets/images/img16.jpg";
 import IMG17 from "../assets/images/img17.jpg";
 import IMG19 from "../assets/images/img19.jpg";
-import { NavLink } from "react-router-dom";
 
 
 const HomeP = () => {
   const { t } = useTranslation();
+  const { selectedCurrency } = useCurrency();
+
+  const [prices, setPrices] = useState({
+    usd: { single_room: '30 $', double_room: '40 $', triple_room: '48 $', lux_room: '58 $'},
+    rub: { single_room: '2760.00 ₽', double_room: '3680.00 ₽', triple_room: '4415.00 ₽', lux_room: '5334.50 ₽'},
+    uzs: { single_room: '370.000 SUM', double_room: '500.000 SUM', triple_room: '590.000 SUM', lux_room: '720.000 SUM'},
+  });
 
   // Room info start
-  const data = translateData(t);
-
-
-
+  const data = translateData(t, selectedCurrency, {...prices});
 
   const columns = useMemo(() => [
     {
@@ -256,7 +261,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 1</p>
-              <p>{t('price')}: 30 $</p>
+              <p>{t('price')}: {prices[selectedCurrency]['single_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -267,7 +272,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: 40 $</p>
+              <p>{t('price')}: {prices[selectedCurrency]['double_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -278,7 +283,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 3</p>
-              <p>{t('price')}: 48 $</p>
+              <p>{t('price')}: {prices[selectedCurrency]['triple_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -290,7 +295,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: 58 $</p>
+              <p>{t('price')}: {prices[selectedCurrency]['lux_room']}</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
