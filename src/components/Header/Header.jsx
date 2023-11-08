@@ -28,6 +28,7 @@ const Header = () => {
   const changeCurrency = (e) => {
     const currency = e.target.value;
     setCurrency(currency)
+    setNavbar(false)
   }
 
 

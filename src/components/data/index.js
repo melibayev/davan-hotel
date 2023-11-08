@@ -6,7 +6,7 @@ export function translateData(t)  {
         room_type: t('single_room'),
         number_of_people: '1',
       },
-      price: '5654',
+      price: '30 $',
       parameters: t('options_desc'),
       
     },
@@ -15,7 +15,7 @@ export function translateData(t)  {
         room_type: t('double_room'),
         number_of_people: '2',
       },
-      price: '500 000 UZS',
+      price: '40 $',
       parameters: t('options_desc'),
       
     },
@@ -24,7 +24,7 @@ export function translateData(t)  {
         room_type: t('triple_room'),
         number_of_people: '3',
       },
-      price: '600 000 UZS',
+      price: '48 $',
       parameters: t('options_desc'),
     },
     {
@@ -32,7 +32,7 @@ export function translateData(t)  {
         room_type: t('lux_room'),
         number_of_people: '2',
       },
-      price: '700 000 UZS',
+      price: '57 $',
       parameters: t('options_desc'),
       
     },
