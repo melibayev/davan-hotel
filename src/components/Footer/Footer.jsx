@@ -12,7 +12,6 @@ const Footer = () => {
         <div className="footer-info">
           <div className="footer-contacts">
             <h4>{t('contact')}</h4>
-            <p>info@mybooking.uz</p>
             <p>Яшнабадский район. Улица Фергана йули 369 Ташкент Узбекистан</p>
             <p>+998 95 142 65 65</p>
             <p>+998 97 704 22 12</p>

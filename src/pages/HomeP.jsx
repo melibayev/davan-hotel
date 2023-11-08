@@ -256,7 +256,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 1</p>
-              <p>{t('price')}: 350.000sum</p>
+              <p>{t('price')}: 30 $</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -267,7 +267,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: 500.000sum</p>
+              <p>{t('price')}: 40 $</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -278,7 +278,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 3</p>
-              <p>{t('price')}: 600.000sum</p>
+              <p>{t('price')}: 48 $</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -290,7 +290,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: 700.000sum</p>
+              <p>{t('price')}: 58 $</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>

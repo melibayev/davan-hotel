@@ -133,8 +133,8 @@ select {
   background-size: cover;
   background-position: center;
   @media (max-width: 800px) {
-    top: 28.3%;
-    left: 60%;
+    top: calc(20% + 56px);
+    left: calc(40% + 50px);
   }
 }
 .flag-icon.ru {
