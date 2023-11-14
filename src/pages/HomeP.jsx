@@ -146,6 +146,9 @@ const HomeP = () => {
   const handleVideoLoad = () => {
     setIsLoading(false);
   };
+  const handleVideoError = () => {
+    setIsLoading(false);
+  };
 
   return (
     <Fragment>
@@ -184,6 +187,7 @@ const HomeP = () => {
               autoPlay
               allowfullscreen
               onLoadedData={handleVideoLoad}
+              onError={handleVideoError}
             ></iframe>
             </div>
             {/* </video> */}
