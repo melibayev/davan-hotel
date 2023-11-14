@@ -146,8 +146,10 @@ const HomeP = () => {
   const handleVideoLoad = () => {
     setIsLoading(false);
   };
-  const handleVideoError = () => {
-    setIsLoading(false);
+  const handleVideoTimeout = () => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
   };
 
   return (
@@ -186,8 +188,7 @@ const HomeP = () => {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               autoPlay
               allowfullscreen
-              onLoadedData={handleVideoLoad}
-              onError={handleVideoError}
+              onLoadedData={handleVideoTimeout}
             ></iframe>
             </div>
             {/* </video> */}
