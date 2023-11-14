@@ -145,9 +145,6 @@ const HomeP = () => {
 
   const handleVideoLoad = () => {
     setIsLoading(false);
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 4000);
   };
 
   console.log(isLoading);
@@ -180,7 +177,6 @@ const HomeP = () => {
             </p>
             {/* <video playsinline controls loop autoPlay muted> */}
             <div className={styles['mobile-video']}>
-            { isLoading && <div className="loader"><svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></div> }
             <iframe
               src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1"
               title="YouTube video player"
@@ -188,7 +184,6 @@ const HomeP = () => {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               autoPlay
               allowfullscreen
-              onLoadedData={handleVideoLoad}
             ></iframe>
             </div>
             {/* </video> */}
