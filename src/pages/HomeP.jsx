@@ -145,12 +145,12 @@ const HomeP = () => {
 
   const handleVideoLoad = () => {
     setIsLoading(false);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 4000);
   };
-  const handleVideoTimeout = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
-  };
+
+  console.log(isLoading);
 
   return (
     <Fragment>
@@ -188,7 +188,7 @@ const HomeP = () => {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               autoPlay
               allowfullscreen
-              onLoadedData={handleVideoTimeout}
+              onLoadedData={handleVideoLoad}
             ></iframe>
             </div>
             {/* </video> */}
