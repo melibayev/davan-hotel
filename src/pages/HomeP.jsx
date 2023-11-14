@@ -174,6 +174,7 @@ const HomeP = () => {
               {t("intro_mobile")}
             </p>
             {/* <video playsinline controls loop autoPlay muted> */}
+            <div className={styles['mobile-video']}>
             { isLoading && <div className="loader"><svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></div> }
             <iframe
               src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1"
@@ -184,6 +185,7 @@ const HomeP = () => {
               allowfullscreen
               onLoadedData={handleVideoLoad}
             ></iframe>
+            </div>
             {/* </video> */}
             <div className={styles["location-info-box"]}>
               <div className={styles["location-info"]}>
