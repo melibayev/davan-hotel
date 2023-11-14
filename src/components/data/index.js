@@ -6,7 +6,8 @@ export function translateData(t, selectedCurrency, prices)  {
         room_type: t('single_room'),
         number_of_people: '1',
       },
-      price: prices[selectedCurrency]['single_room'],
+      price_for_foreigners: '25$',
+      price_for_uzbek: '270.000 Sum',
       parameters: t('options_desc'),
       
     },
@@ -15,7 +16,8 @@ export function translateData(t, selectedCurrency, prices)  {
         room_type: t('double_room'),
         number_of_people: '2',
       },
-      price: prices[selectedCurrency]['double_room'],
+      price_for_foreigners: '38$',
+      price_for_uzbek: '390.000 Sum',
       parameters: t('options_desc'),
       
     },
@@ -24,7 +26,8 @@ export function translateData(t, selectedCurrency, prices)  {
         room_type: t('triple_room'),
         number_of_people: '3',
       },
-      price: prices[selectedCurrency]['triple_room'],
+      price_for_foreigners: '51$',
+      price_for_uzbek: '510.000 Sum',
       parameters: t('options_desc'),
     },
     {
@@ -32,7 +35,8 @@ export function translateData(t, selectedCurrency, prices)  {
         room_type: t('lux_room'),
         number_of_people: '2',
       },
-      price: prices[selectedCurrency]['lux_room'],
+      price_for_foreigners: "54$",
+      price_for_uzbek: "550.000 Sum",
       parameters: t('options_desc'),
       
     },

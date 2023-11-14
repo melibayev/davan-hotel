@@ -61,7 +61,7 @@ const Header = () => {
                 <NavLink to={"tel:+998951426565"}>
                   <li className="navbar-link number">+998951426565</li>
                 </NavLink>
-                <NavLink to={"/"}>
+                {/* <NavLink to={"/"}>
                   <li className="navbar-link">
                     <select value={selectedCurrency} onChange={handleCurrencyChange}>
                       <option value="usd">USD $</option>
@@ -69,7 +69,7 @@ const Header = () => {
                       <option value="uzs">UZS</option>
                     </select>
                   </li>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to={"/"}>
                   <li className="navbar-link">
                   <select id="languageSelect" value={selectedCountry} onChange={handleCountryChange}>

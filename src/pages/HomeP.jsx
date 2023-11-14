@@ -93,8 +93,13 @@ const HomeP = () => {
       size: 150,
     },
     {
-      accessorKey: "price", //normal accessorKey
+      accessorKey: "price_for_uzbek", //normal accessorKey
       header: t('price'),
+      size: 200,
+    },
+    {
+      accessorKey: "price_for_foreigners", //normal accessorKey
+      header: t('price_for_foreigner'),
       size: 200,
     },
     {
@@ -303,7 +308,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 1</p>
-              <p>{t('price')}: {prices[selectedCurrency]['single_room']}</p>
+              <p>{t('price_for_mobile')}: 25$ (270.000 Sum)</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -316,7 +321,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]} >
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: {prices[selectedCurrency]['double_room']}</p>
+              <p>{t('price_for_mobile')}: 38$ (390.000 Sum)</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -329,7 +334,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]} >
               <p>{t('max_persons')}: 3</p>
-              <p>{t('price')}: {prices[selectedCurrency]['triple_room']}</p>
+              <p>{t('price_for_mobile')}: 51$ (510.000 Sum)</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -343,7 +348,7 @@ const HomeP = () => {
             </div>
             <div className={styles["room-description"]}>
               <p>{t('max_persons')}: 2</p>
-              <p>{t('price')}: {prices[selectedCurrency]['lux_room']}</p>
+              <p>{t('price_for_mobile')}: 54$ (550.000 Sum)</p>
               <p>{t('options_desc')}</p>
               <p></p>
             </div>
@@ -358,7 +363,7 @@ const HomeP = () => {
             <h2>{t('clients')}</h2>
             <iframe
               title="reviews"
-              src="https://widget-6534a686c62d4742851c145989909db2.elfsig.ht"
+              src="https://widget-4eae788c0eef4624ae4b393a99d53dcb.elfsig.ht"
               frameborder="0"
             ></iframe>
           </div>
