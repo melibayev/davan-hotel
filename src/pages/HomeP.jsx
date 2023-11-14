@@ -44,6 +44,7 @@ import IMG14 from "../assets/images/img14.jpg";
 import IMG16 from "../assets/images/img16.jpg";
 import IMG17 from "../assets/images/img17.jpg";
 import IMG19 from "../assets/images/img19.jpg";
+import Header from "../components/Header/Header";
 
 
 const HomeP = () => {
@@ -140,16 +141,11 @@ const HomeP = () => {
   });
   // Room info end
 
-  const [scrolled, setScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= 200) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  });
-
+  const handleVideoLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
     <Fragment>
@@ -160,7 +156,8 @@ const HomeP = () => {
       </div>
       <section id={styles.intro}>
         <div className={styles["intro-section"]}>
-          <video controls={false} loop autoPlay muted>
+        { isLoading && <div className="loader"><svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></div> }
+          <video controls={false} loop autoPlay muted onLoadedData={handleVideoLoad}>
             <source src={VIDEO} type="video/ogg" />
           </video>
         </div>
@@ -177,6 +174,7 @@ const HomeP = () => {
               {t("intro_mobile")}
             </p>
             {/* <video playsinline controls loop autoPlay muted> */}
+            { isLoading && <div className="loader"><svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></div> }
             <iframe
               src="https://www.youtube.com/embed/vBF_WNPb-A0?rel=0&autoplay=1&mute=1&showinfo=0&modestbranding=1&controls=0&loop=1"
               title="YouTube video player"
@@ -184,6 +182,7 @@ const HomeP = () => {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               autoPlay
               allowfullscreen
+              onLoadedData={handleVideoLoad}
             ></iframe>
             {/* </video> */}
             <div className={styles["location-info-box"]}>

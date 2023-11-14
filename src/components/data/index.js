@@ -41,4 +41,3 @@ export function translateData(t, selectedCurrency, prices)  {
       
     },
   ]};
-
